@@ -1,0 +1,7 @@
+<div class="ui fixed inverted menu">
+    <div class="ui container">
+        <a class="item@(ViewBag.Selected == 1?" active":"")" asp-controller="home" asp-action="Index">Главное</a>
+        <a class="item@(ViewBag.Selected == 2?" active":"")" asp-controller="packages" asp-action="Index">Список пакетов</a>
+        <a class="item@(ViewBag.Selected == 3?" active":"")">Пакеты в разработке</a>
+    </div>
+</div>

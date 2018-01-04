@@ -1,0 +1,24 @@
+<h1>Пакеты</h1>
+
+<table class="ui celled table">
+    <thead>
+        <tr>
+            <th>Название</th>
+            <th>Актуальная версия</th>
+            <th>Адрес репозитория</th>
+        </tr>
+    </thead>
+    <tbody>
+    
+    @if(@Model != null) {
+        @foreach(var pack in @Model) {
+            <tr>
+                <td>@pack.id</td>
+                <td>@pack.lastVersion</td>
+                <td>&lt;в разработке&gt;</td>
+            </tr>
+        }
+    }
+    </tbody>
+    
+</table>
