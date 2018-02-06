@@ -1,3 +1,21 @@
 <h1>@ViewContext.RouteData.Values["id"]</h1>
 
 @Html.Raw(Model.DescriptionPage)
+
+<table class="ui celled table"
+    <thead>
+        <th>Зависимость</th>
+        <th>Версия</th>
+    </thead>
+
+    <tbody>
+
+        @foreach(var dependency in @Model.PackageData.dependencies) {
+            <tr>
+                <td>@dependency.name</td>
+                <td>@dependency.version</td>
+            </tr>
+        }
+    </tbody>
+
+</table>

@@ -279,7 +279,17 @@
             "1.5",
             "1.5.1"
         ],
-        "bannedVersions": []
+        "bannedVersions": [],
+        "dependencies": [
+            {
+                "name": "logos",
+                "version": "1.0.0"
+            },
+            {
+                "name": "v8runner",
+                "version": "0.10.1"
+            }
+        ]
     },
     "vanessa-runner": {
         "id": "vanessa-runner",
