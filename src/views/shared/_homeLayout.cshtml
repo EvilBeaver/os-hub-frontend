@@ -4,17 +4,10 @@
         <title>Репозиторий пакетов 1Script</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css"/>
         @RenderSection("styles", false)
-        <style>
-            #content {
-                margin-top: 70pt;
-            }
-        </style>
     </head>
     <body>
         @Html.Partial("NavMenu")
-        <div class="ui container" id="content">
-            @RenderBody()
-        </div>
+        @RenderBody()
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>
         @RenderSection("scripts", false)

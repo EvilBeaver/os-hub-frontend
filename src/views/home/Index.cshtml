@@ -1,4 +1,98 @@
-<h1 class="ui header">Концепция</h1>
-<p>Экосистема 1Script широко использует "пакеты" - повторно используемые модули кода, написанные различными разработчиками.</p>
-<p>Наиболее часто применяемые пакеты собраны в библиотеку "oscript-library" и опубликованы на этом ресурсе.</p>
-<p>Управление пакетами осуществляется через пакетный менеджер opm, который сам является приложением 1script.</p>
+@{
+    Layout="_homeLayout";
+}
+
+<div class="ui grid massive message" style="font-size: 1.5em">
+    <div class="ui container">
+        <div class="row">
+          <div class="ui large header" style="color:aliceblue;">
+              Создавайте приложения 1Script быстрее и проще!
+          </div>
+          <p>
+            Сообществом разработано большое количество готовых пакетов и приложений, которые упрощают и ускоряют разработку. Прежде чем реализовывать функциональность - поищите готовый пакет, возможно, он уже существует!
+          </p>
+          <form class="ui form" id="search-form">
+            <div class="fields">
+                <div class="field" style="width: 100%">
+                    <input type="text" placeholder="Название, текст описания, ключевые слова...">
+                </div>
+                <button class="ui submit button" type="submit">Искать</button>
+            </div>
+          </form>
+        </div>
+      </div>
+</div>
+
+<div class="ui hidden divider"></div>
+
+<div class="ui container">
+    <h1 class="ui center aligned header">Что такое инфраструктура пакетов?</h1>
+    <p class="centered">Пакеты 1Script разрабатываются сообществом и публикуются в хабе пакетов. Любой желающий может установить пакет из облака или добавить свой, чтобы внести свой вклад в общее дело.</p>
+    <div class="ui hidden divider"></div>
+    <div class="ui stackable grid">
+        <div class="three column row">
+            <div class="column">
+                <div class="ui header">
+                    Эффективность
+                </div>
+                <p>Существует целый пласт готовых решений. От администрирования серверов 1С до работы с Яндекс.Диском и Telegram.</p>
+                <p>Не нужно разрабатывать с нуля, можно установить пакет из облака и подключить его в свое приложение.</p>
+            </div>
+            <div class="column">
+                <div class="ui header">
+                    Сотрудничество
+                </div>
+                <p>Вам не хватило функциональности пакета - попросите автора добавить ее, или добавьте сами. Мы исповедуем концепцию открытого кода и взаимопомощи.</p>
+                <p>Общаясь и сотрудничая, мы создаем вещи, которыми пользуются 1С-ники по всему миру. Вливайся!</p>
+            </div>
+            <div class="column">
+                <div class="ui header">
+                    Творчество
+                </div>
+                <p>1Script позволяет выйти за рамки экосистемы 1С, продолжая разрабатывать приложения на привычном языке.</p>
+                <p>Создавайте новое, делитесь с сообществом, создайте продукт и раскройте себя, как автора.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section styles {
+<style>
+    .ui.form .inline.fields {
+        margin: 0.5em;
+    }
+    .ui.divider {
+        margin-top: 30pt;
+    }
+    p.centered {
+        font-size: 14pt;
+        text-align: center;
+    }
+
+    .ui.grid.message {
+        background-color: #00588c;
+        color: aliceblue;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .ui.grid.message .row {
+        margin-top: 2.7em;
+        margin-bottom: 2.7em;
+        text-align: center;
+    }
+    .ui.grid.message .row p {
+        line-height: 1.5;
+        margin-top: 1em;
+    }
+    .column p {
+        font-size: 12pt;
+    }
+    h1.ui.header, h2.ui.header {
+        font-family: 'Segoe UI', Arial, Helvetica, Verdana, sans-serif
+    }
+    #search-form {
+        margin-top: 2em;
+    }
+   
+</style>
+}
