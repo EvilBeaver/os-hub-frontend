@@ -13,8 +13,8 @@
     @if(@Model != null) {
         @foreach(var pack in @Model) {
             <tr>
-                <td><a asp-action="Details" asp-route-id="@pack.id">@pack.id</a></td>
-                <td>@pack.lastVersion</td>
+                <td><a asp-action="Details" asp-route-id="@pack.Название">@pack.Название</a></td>
+                <td>pack.lastVersion</td>
                 <td>&lt;нет данных&gt;</td>
             </tr>
         }
