@@ -14,11 +14,13 @@
         @foreach(var pack in @Model) {
             <tr>
                 <td><a asp-action="Details" asp-route-id="@pack.Название">@pack.Название</a></td>
-                <td>pack.lastVersion</td>
-                <td>&lt;нет данных&gt;</td>
+                <td>@pack.АктуальнаяВерсия?.ВСтроку()</td>
+                <td><a href="@pack.АдресРепозитория">@pack.АдресРепозитория</a></td>
             </tr>
         }
     }
     </tbody>
     
 </table>
+
+<div style="margin-top: 3em;">&nbsp;</div>
