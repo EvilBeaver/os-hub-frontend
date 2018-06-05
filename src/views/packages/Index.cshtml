@@ -1,5 +1,16 @@
 <h1>Пакеты</h1>
 
+<form class="ui form" id="search-form" method="GET" asp-controller="packages" asp-action="search">
+    <div class="fields">
+        <div class="field" style="width: 100%">
+            <input type="text" 
+                name="text"
+                placeholder="Название, текст описания, ключевые слова...">
+        </div>
+        <button class="ui submit button" type="submit">Искать</button>
+    </div>
+</form>
+
 <table class="ui compact celled table">
     <thead>
         <tr>
