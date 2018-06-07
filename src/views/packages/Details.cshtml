@@ -32,21 +32,39 @@
             <em>@Model.PackageData.Описание</em>
         }
     </p>
-    <p>
-        <b>Исходный код, задачи, обратная связь:</b>
-        <p>
-            <a href="@Model.PackageData.АдресРепозитория">@Model.PackageData.АдресРепозитория</a>
-        </p>
-    </p>
     <div class="ui hidden divider"></div>
 
+    <div class="ui basic segment">
+        <table class="ui table">
+            <tbody>
+                <tr>
+                    <td>
+                        <b>Исходный код, задачи, обратная связь:</b>
+                    </td>
+                    <td>
+                        <a href="@Model.PackageData.АдресРепозитория">@Model.PackageData.АдресРепозитория</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td><b>Актуальная версия:</b></td>
+                    <td>
+                        <a href="/download/@Model.PackageData.Название/@(Model.PackageData.Название+"-"+@Model.PackageData.АктуальнаяВерсия?.ВСтроку()+".ospx")">
+                            @(Model.PackageData.Название+"-"+@Model.PackageData.АктуальнаяВерсия?.ВСтроку())
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </tbody>
+        </table>
+    </div>
+
     <div class="ui pointing secondary menu">
-    <a class="item active" data-tab="readme">Описание</a>
-    <a class="item" data-tab="versions">Версии</a>
-    <a class="item" data-tab="depends">Зависимости</a>
+        <a class="item active" data-tab="readme">Описание</a>
+        <a class="item" data-tab="versions">Версии</a>
+        <a class="item" data-tab="depends">Зависимости</a>
     </div>
     <div class="ui tab segment active" data-tab="readme">
-    @Html.Raw(Model.DescriptionPage)
+        @Html.Raw(Model.DescriptionPage)
     </div>
     <div class="ui tab segment" data-tab="versions">
     В разработке
