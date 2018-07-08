@@ -33,8 +33,8 @@
 	СхемаПакета = Новый Соответствие;
 	СхемаПакета.Вставить("controller", "download");
 	СхемаПакета.Вставить("action", "download");
-	КоллекцияМаршрутов.Добавить("stableDownload", "download/{package}/{filename}", СхемаПакета);
-	КоллекцияМаршрутов.Добавить("devDownload", "dev-channel/{package}/{filename}", СхемаПакета);
+	КоллекцияМаршрутов.Добавить("stableDownload", "download/{*filepath}", СхемаПакета);
+	КоллекцияМаршрутов.Добавить("devDownload", "dev-channel/{*filepath}", СхемаПакета);
 
 	КоллекцияМаршрутов.Добавить("default", "{controller=Home}/{action=Index}/{id?}", Новый Соответствие);
 
