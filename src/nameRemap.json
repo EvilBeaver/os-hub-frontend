@@ -1,4 +1,9 @@
 {
     "os-confluence":"confluence",
-    "oscript-yadisk":"yadisk"
+    "oscript-yadisk":"yadisk",
+    "oscript-simple-gui":"gui",
+    "OneScript-Collections":"collections",
+    "rabbitmq":"RabbitMQ",
+    "parserV8i":"ParserFileV8i",
+    "onescript-extensions":"extensions"
 }
