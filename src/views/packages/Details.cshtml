@@ -53,7 +53,7 @@
                     @Html.Raw(Model.DescriptionPage)
                 </div>
                 <div class="ui tab segment" data-tab="versions">
-                В разработке
+                    @await Component.InvokeAsync("packageVersions", new {model = Model.PackageData})
                 </div>
                 <div class="ui tab segment" data-tab="depends">
                 В разработке
