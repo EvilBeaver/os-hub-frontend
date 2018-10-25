@@ -14,6 +14,7 @@
         pre {
             background: #eee;
             padding: 10px 10px 10px 10px;
+            overflow-x: auto;
         }
         code {
             background: #eee;
@@ -48,7 +49,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="twelve wide column">
+            <div class="thirteen wide column">
                 <div class="ui tab segment active" data-tab="readme">
                     @Html.Raw(Model.DescriptionPage)
                 </div>
@@ -59,7 +60,7 @@
                 В разработке
                 </div>
             </div>
-            <div class="four wide column">
+            <div class="three wide column">
                 <p class="ui tiny header">Репозиторий</p>
                 <p><a href="@Model.PackageData.АдресРепозитория">@Model.PackageData.АдресРепозитория</a></p>
                 <p class="ui tiny header">Актуальная версия</p>
