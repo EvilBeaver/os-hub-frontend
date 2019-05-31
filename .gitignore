@@ -1,2 +1,3 @@
 oscript_modules/
 testHub
+./docker-compose.yml
