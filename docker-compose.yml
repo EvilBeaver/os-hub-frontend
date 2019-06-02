@@ -1,0 +1,12 @@
+version: "3"
+services:
+  os-hub:
+    build: ./
+    image: oshub:dev
+    ports:
+     - 80:5000
+    volumes:
+     - hub-volume:/var/www
+    environment: 
+     - OSHUB_BINARY_ROOT
+     - GITHUB_SUPER_TOKEN
