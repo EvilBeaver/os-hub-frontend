@@ -6,7 +6,22 @@ services:
     ports:
      - 80:5000
     volumes:
-     - hub-volume:/var/www
+     - d:/DATA/SHARE:/var/www
     environment: 
-     - OSHUB_BINARY_ROOT
-     - GITHUB_SUPER_TOKEN
+     - OSHUB_BINARY_ROOT=/var/www/hub.oscript.io
+     - GITHUB_SUPER_TOKEN=1
+    #  - LOGOS_CONFIG=logger.rootLogger=DEBUG
+  db:
+    image: postgres
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_PASSWORD=paswwd
+  pgadmin:
+    image: dpage/pgadmin4
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=olegtymko@yandex.ru
+      - PGADMIN_DEFAULT_PASSWORD=password
+    ports:
+      - "8080:80"
+    restart: unless-stopped
