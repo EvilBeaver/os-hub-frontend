@@ -8,20 +8,21 @@ services:
     volumes:
      - d:/DATA/SHARE:/var/www
     environment: 
-     - OSHUB_BINARY_ROOT=/var/www/hub.oscript.io
-     - GITHUB_SUPER_TOKEN=1
-    #  - LOGOS_CONFIG=logger.rootLogger=DEBUG
+     - OSHUB_BINARY_ROOT
+     - GITHUB_SUPER_TOKEN
+     - OSWEB_DATABASE__TYPE
+     - OSWEB_DATABASE__CONNECTIONSTRING
   db:
     image: postgres
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_PASSWORD=paswwd
+      - POSTGRES_PASSWORD
   pgadmin:
     image: dpage/pgadmin4
     environment:
-      - PGADMIN_DEFAULT_EMAIL=olegtymko@yandex.ru
-      - PGADMIN_DEFAULT_PASSWORD=password
+      - PGADMIN_DEFAULT_EMAIL
+      - PGADMIN_DEFAULT_PASSWORD
     ports:
-      - "8080:80"
+      - 8080:80
     restart: unless-stopped
