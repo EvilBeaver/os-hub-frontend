@@ -25,7 +25,7 @@
         @foreach(var pack in @Model) {
             <tr>
                 <td><a asp-action="Details" asp-route-id="@pack.Название">@pack.Название</a></td>
-                <td>@pack.АктуальнаяВерсия?.ВСтроку()</td>
+                <td>@pack.АктуальнаяВерсия</td>
                 <td><a href="@pack.АдресРепозитория">@pack.АдресРепозитория</a></td>
             </tr>
         }

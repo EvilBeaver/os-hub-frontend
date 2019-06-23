@@ -64,8 +64,8 @@
                 <p class="ui tiny header">Репозиторий</p>
                 <p><a href="@Model.PackageData.АдресРепозитория">@Model.PackageData.АдресРепозитория</a></p>
                 <p class="ui tiny header">Актуальная версия</p>
-                <p><a href="/download/@Model.PackageData.Название/@(Model.PackageData.Название+"-"+@Model.PackageData.АктуальнаяВерсия?.ВСтроку()+".ospx")">
-                                    @(Model.PackageData.Название+"-"+@Model.PackageData.АктуальнаяВерсия?.ВСтроку())
+                <p><a href="/download/@Model.PackageData.Название/@(Model.PackageData.Название+"-"+@Model.PackageData.АктуальнаяВерсия+".ospx")">
+                                    @(Model.PackageData.Название+"-"+@Model.PackageData.АктуальнаяВерсия)
                 </a></p>
             </div>
         </div>
