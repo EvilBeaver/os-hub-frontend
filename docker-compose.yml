@@ -6,7 +6,7 @@ services:
     ports:
      - 80:5000
     volumes:
-     - d:/DATA/SHARE:/var/www
+     - ./docker/share:/var/www
     environment: 
      - OSHUB_BINARY_ROOT
      - GITHUB_SUPER_TOKEN
@@ -16,6 +16,8 @@ services:
     image: postgres
     ports:
       - 5432:5432
+    volumes:
+     - ./docker/share:/var/www
     environment:
       - POSTGRES_PASSWORD
   pgadmin:
