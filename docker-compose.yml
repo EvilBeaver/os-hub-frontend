@@ -12,12 +12,14 @@ services:
      - GITHUB_SUPER_TOKEN
      - OSWEB_DATABASE__TYPE
      - OSWEB_DATABASE__CONNECTIONSTRING
+    depends_on:
+      - db
   db:
     image: postgres
     ports:
       - 5432:5432
-    volumes:
-     - ./docker/share:/var/www
+    # volumes:
+    #  - ./docker/database:/data
     environment:
       - POSTGRES_PASSWORD
   pgadmin:
