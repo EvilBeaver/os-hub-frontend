@@ -1,3 +1,5 @@
 oscript_modules/
 testHub
 ./docker-compose.yml
+docker/share/*
+docker/database/*
