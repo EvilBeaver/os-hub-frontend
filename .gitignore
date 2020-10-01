@@ -3,3 +3,6 @@ testHub
 ./docker-compose.yml
 docker/share/*
 docker/database/*
+
+borderlands
+target

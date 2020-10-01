@@ -1,17 +1,19 @@
 version: "3"
 services:
   os-hub:
-    build: ./
-    image: oshub:dev
+    image: evilbeaver/oscript-web:0.6.0
     ports:
      - 80:5000
     volumes:
+     - ./src:/app
      - ./docker/share:/var/www
     environment: 
      - OSHUB_BINARY_ROOT
      - GITHUB_SUPER_TOKEN
      - OSWEB_DATABASE__TYPE
      - OSWEB_DATABASE__CONNECTIONSTRING
+     - OSHUB_DEFAULT_USER
+     - OSHUB_DEFAULT_PASSWORD
     depends_on:
       - db
   db:
