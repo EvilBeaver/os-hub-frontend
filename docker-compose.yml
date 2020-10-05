@@ -13,6 +13,7 @@ services:
      - OSWEB_DATABASE__CONNECTIONSTRING
      - OSHUB_DEFAULT_USER
      - OSHUB_DEFAULT_PASSWORD
+     - OSHUB_TG_NOTIFICATION
     depends_on:
       - db
   db:
