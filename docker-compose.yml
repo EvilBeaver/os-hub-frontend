@@ -13,6 +13,9 @@ services:
      - OSWEB_DATABASE__CONNECTIONSTRING
      - OSHUB_DEFAULT_USER
      - OSHUB_DEFAULT_PASSWORD
+     - OSHUB_TG_NOTIFICATION
+     - TELEGRAM_TOKEN
+     - TELEGRAM_GROUP_ID
     depends_on:
       - db
   db:
