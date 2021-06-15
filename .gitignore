@@ -6,3 +6,5 @@ docker/database/*
 
 borderlands
 target
+.env
+tmp

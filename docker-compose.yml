@@ -3,14 +3,14 @@ services:
   os-hub:
     build: .
     ports:
-     - 80:5000
+     - 8000:5000
     volumes:
      - ./docker/share:/var/www
     environment: 
-     - OSHUB_BINARY_ROOT
+     - OSHUB_BINARY_ROOT=/opt/opm-hub/packages
      - GITHUB_SUPER_TOKEN
-     - OSWEB_DATABASE__TYPE
-     - OSWEB_DATABASE__CONNECTIONSTRING
+     - OSWEB_Database__DBTYPE
+     - OSWEB_Database__CONNECTIONSTRING
      - OSHUB_DEFAULT_USER
      - OSHUB_DEFAULT_PASSWORD
      - OSHUB_TG_NOTIFICATION
@@ -18,11 +18,14 @@ services:
      - TELEGRAM_GROUP_ID
     depends_on:
       - db
+    volumes:
+      - C:/Users/ovsyankin.a.a/Documents/GITS/EvilBeaver/os-hub-frontend/tmp:/opt/opm-hub/packages/download
   db:
     image: postgres
     ports:
       - 5432:5432
     environment:
+      - POSTGRES_USER
       - POSTGRES_PASSWORD
   pgadmin:
     image: dpage/pgadmin4
