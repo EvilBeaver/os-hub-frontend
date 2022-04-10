@@ -4,7 +4,7 @@ COPY src /app
 WORKDIR /app
 RUN opm install -l
 
-FROM evilbeaver/oscript-web:0.9.1
+FROM evilbeaver/oscript-web:0.9.3
 
 ENV ASPNETCORE_ENVIRONMENT=Production
 COPY --from=0 /app .
