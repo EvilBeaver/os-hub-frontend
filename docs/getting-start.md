@@ -16,6 +16,7 @@ git clone https://github.com/EvilBeaver/os-hub-frontend.git
 ```
 + Копируем на сервер каталог hub.oscript.io ./docker/share
 + Копируем на сервер бекап базы PostgreSQL hub.oscript.io в каталог ./docker/database
+
 Можно обойтись просто созданием папки, без загрузки и разворачиванеия бекапа, хаб будет пустой.
 
 + Устанавливаем переменные среды в docker-compose.yml:
