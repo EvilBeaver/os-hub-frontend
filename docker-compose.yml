@@ -9,29 +9,27 @@ services:
     environment: 
      - OSHUB_BINARY_ROOT=/opt/opm-hub/packages
      - GITHUB_SUPER_TOKEN
-     - OSWEB_Database__DBTYPE
-     - OSWEB_Database__CONNECTIONSTRING
-     - OSHUB_DEFAULT_USER
-     - OSHUB_DEFAULT_PASSWORD
-     - OSHUB_TG_NOTIFICATION
+     - OSWEB_Database__DBTYPE=postgres
+     - OSWEB_Database__CONNECTIONSTRING=Host=db;Username=postgres;Password=postgres;Database=postgres;port=5432;
+     - OSHUB_DEFAULT_USER=admin
+     - OSHUB_DEFAULT_PASSWORD=admin
+     - OSHUB_TG_NOTIFICATION=true
      - TELEGRAM_TOKEN
      - TELEGRAM_GROUP_ID
     depends_on:
       - db
-    volumes:
-      - C:/Users/ovsyankin.a.a/Documents/GITS/EvilBeaver/os-hub-frontend/tmp:/opt/opm-hub/packages/download
   db:
     image: postgres
     ports:
       - 5432:5432
     environment:
-      - POSTGRES_USER
-      - POSTGRES_PASSWORD
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
   pgadmin:
     image: dpage/pgadmin4
     environment:
-      - PGADMIN_DEFAULT_EMAIL
-      - PGADMIN_DEFAULT_PASSWORD
+      - PGADMIN_DEFAULT_EMAIL=example@postgres.com
+      - PGADMIN_DEFAULT_PASSWORD=postgres
     ports:
       - 8080:80
     restart: unless-stopped
