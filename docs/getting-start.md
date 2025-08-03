@@ -16,14 +16,22 @@ git clone https://github.com/EvilBeaver/os-hub-frontend.git
 ```
 + Копируем на сервер каталог hub.oscript.io ./docker/share
 + Копируем на сервер бекап базы PostgreSQL hub.oscript.io в каталог ./docker/database
-+ Устанавливаем переменные среды. Выбор пол на файл .evn. В нем указываем:
+Можно обойтись просто созданием папки, без загрузки и разворачиванеия бекапа, хаб будет пустой.
+
++ Устанавливаем переменные среды в docker-compose.yml:
 ```
-OSHUB_BINARY_ROOT=
+OSHUB_BINARY_ROOT=/opt/opm-hub/packages
 GITHUB_SUPER_TOKEN=
 POSTGRES_PASSWORD=
 PGADMIN_DEFAULT_EMAIL=
 PGADMIN_DEFAULT_PASSWORD=
 OSWEB_DATABASE__CONNECTIONSTRING=Host=db;Username=postgres;Password=postgres;Database=postgres;port=5432;
+OSWEB_Database__DBTYPE=postgres #Тип СУБД 
+OSHUB_DEFAULT_USER=admin
+OSHUB_DEFAULT_PASSWORD=admin
+OSHUB_TG_NOTIFICATION=true #Отправка уведомлений в телеграм
+TELEGRAM_TOKEN= #Токен к боту для отправки уведомлений
+TELEGRAM_GROUP_ID= #Группа в которую будет отправляться уведомления
 ```
 + Запускаем сервис db с postgresql и pgadmin
 ```
